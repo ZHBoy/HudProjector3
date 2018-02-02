@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black" >
+
+    <RelativeLayout
+        android:id="@+id/rl_gnavi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_speechicon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_speech" />
+
+        <TextView
+            android:id="@+id/tv_speechtip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_speechicon"
+            android:text="@string/navi_loc_error"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titletext_size" />
+    </RelativeLayout>
+    <!-- 路线选择的容器 -->
+
+    <FrameLayout
+        android:id="@+id/fl_gnavi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/associate_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/home_marginleftright"
+            android:layout_marginRight="@dimen/home_marginleftright"
+            android:listSelector="@android:color/transparent"
+            android:visibility="gone" >
+        </ListView>
+
+        <FrameLayout
+            android:id="@+id/fl_gmap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/gnavi_ll_common_loc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="35dp"
+                android:weightSum="3" >
+
+                <TextView
+                    android:id="@+id/gnavi_tv_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/control_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:nextFocusDown="@+id/gnavi_tv_company"
+                    android:nextFocusLeft="@+id/gnavi_tv_common_loc"
+                    android:nextFocusRight="@+id/gnavi_tv_company"
+                    android:nextFocusUp="@+id/gnavi_tv_common_loc"
+                    android:text="@string/tv_home"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/gnavi_tv_company"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/control_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:nextFocusDown="@+id/gnavi_tv_common_loc"
+                    android:nextFocusLeft="@+id/gnavi_tv_home"
+                    android:nextFocusRight="@+id/gnavi_tv_common_loc"
+                    android:nextFocusUp="@+id/gnavi_tv_home"
+                    android:text="@string/tv_company"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/gnavi_tv_common_loc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/control_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:nextFocusDown="@+id/gnavi_tv_home"
+                    android:nextFocusLeft="@+id/gnavi_tv_company"
+                    android:nextFocusRight="@+id/gnavi_tv_home"
+                    android:nextFocusUp="@+id/gnavi_tv_company"
+                    android:text="@string/tv_common_loc"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/gnavi_ll_route_plans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/icon_navi_stragy_bg"
+                    android:orientation="horizontal"
+                    android:paddingBottom="2dp"
+                    android:visibility="gone"
+                    android:weightSum="3" >
+
+                    <LinearLayout
+                        android:id="@+id/gnavi_ll_not_traffic_plan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/control_bg"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:nextFocusDown="@+id/gnavi_ll_not_high_speed_plan"
+                        android:nextFocusLeft="@+id/gnavi_ll_not_fees_plan"
+                        android:nextFocusRight="@+id/gnavi_ll_not_high_speed_plan"
+                        android:nextFocusUp="@+id/gnavi_ll_not_fees_plan"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/gnavi_tv_not_traffic_plan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/navi_strategy_timenojam"
+                            android:textColor="@color/white"
+                            android:textSize="33sp" />
+
+                        <TextView
+                            android:id="@+id/gnavi_tv_not_traffic_plan_distance_and_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/gnavi_ll_not_high_speed_plan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/control_bg"
+                        android:focusable="true"
+                        android:nextFocusDown="@+id/gnavi_ll_not_fees_plan"
+                        android:nextFocusLeft="@id/gnavi_ll_not_traffic_plan"
+                        android:nextFocusRight="@+id/gnavi_ll_not_fees_plan"
+                        android:nextFocusUp="@id/gnavi_ll_not_traffic_plan"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/gnavi_tv_not_high_speed_plan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/navi_strategy_nohighway"
+                            android:textColor="@color/white"
+                            android:textSize="33sp" />
+
+                        <TextView
+                            android:id="@+id/gnavi_tv_not_high_speed_plan_distance_and_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/gnavi_ll_not_fees_plan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/control_bg"
+                        android:focusable="true"
+                        android:nextFocusDown="@+id/gnavi_ll_not_traffic_plan"
+                        android:nextFocusLeft="@id/gnavi_ll_not_high_speed_plan"
+                        android:nextFocusRight="@+id/gnavi_ll_not_traffic_plan"
+                        android:nextFocusUp="@id/gnavi_ll_not_high_speed_plan"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/gnavi_tv_not_fees_plan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/navi_strategy_cost"
+                            android:textColor="@color/white"
+                            android:textSize="33sp" />
+
+                        <TextView
+                            android:id="@+id/gnavi_tv_not_fees_plan_distance_and_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--
+                     <TextView
+                    android:id="@+id/tv_counttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/green"
+                    android:textSize="60sp" />
+                -->
+
+                <com.infisight.hudprojector.widget.TimerCountDownView
+                    android:id="@+id/tv_counttime"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#aa00ff00"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+</RelativeLayout>

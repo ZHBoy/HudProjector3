@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/home_marginleftright"
+        android:layout_marginRight="@dimen/home_marginleftright"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_managefavorite"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            android:background="@drawable/control_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:nextFocusDown="@+id/rl_managewifi"
+            android:nextFocusLeft="@+id/rl_traffic"
+            android:nextFocusRight="@+id/rl_managewifi"
+            android:nextFocusUp="@+id/rl_traffic"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/iv_managefavorite"
+                android:layout_width="@dimen/navibar_button_height"
+                android:layout_height="@dimen/navibar_button_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_managefavorite" />
+
+            <TextView
+                android:id="@+id/tv_managefavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv_managefavorite"
+                android:text="@string/setting_managefavorite"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_arrow" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_managevoice"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            android:background="@drawable/control_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:nextFocusDown="@+id/rl_managewifi"
+            android:nextFocusLeft="@+id/rl_traffic"
+            android:nextFocusRight="@+id/rl_managewifi"
+            android:nextFocusUp="@+id/rl_traffic" >
+
+            <ImageView
+                android:id="@+id/iv_managevoice"
+                android:layout_width="@dimen/navibar_button_height"
+                android:layout_height="@dimen/navibar_button_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/setting_voice" />
+
+            <TextView
+                android:id="@+id/tv_managevoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv_managevoice"
+                android:text="@string/setting_managevoice"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" >
+
+                <ImageView
+                    android:id="@+id/iv_managevoice_rightarr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_arrow" />
+
+                <LinearLayout
+                    android:id="@+id/ll_managevoice_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_toLeftOf="@id/iv_managevoice_rightarr"
+                    android:minWidth="150dip"
+                    android:orientation="vertical"
+                    android:weightSum="2" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/voicevolume_tip"
+                            android:textColor="@color/green"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tv_voicevolume_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/green"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/musicvolume_tip"
+                            android:textColor="@color/green"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tv_musicvolume_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/green"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_managevoice_leftarr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/ll_managevoice_content"
+                    android:src="@drawable/icon_leftarrow" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_managewifi"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            android:background="@drawable/control_bg"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:nextFocusDown="@+id/rl_managehotspot"
+            android:nextFocusLeft="@+id/rl_managevoice"
+            android:nextFocusRight="@+id/rl_managehotspot"
+            android:nextFocusUp="@+id/rl_managevoice" >
+
+            <ImageView
+                android:id="@+id/iv_managewifi"
+                android:layout_width="@dimen/navibar_button_height"
+                android:layout_height="@dimen/navibar_button_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_managewifi" />
+
+            <TextView
+                android:id="@+id/tv_managewifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv_managewifi"
+                android:text="@string/setting_managewifi"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" >
+
+                <ImageView
+                    android:id="@+id/iv_managewifi_rightarr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_arrow" />
+
+                <LinearLayout
+                    android:id="@+id/ll_managewifi_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_toLeftOf="@id/iv_managewifi_rightarr"
+                    android:minWidth="150dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_wifiinfor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/green"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_managewifi_leftarr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/ll_managewifi_content"
+                    android:src="@drawable/icon_leftarrow" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_arrow" />
+        </RelativeLayout>
+        <!-- 显示已连接的wifi -->
+
+        <RelativeLayout
+            android:id="@+id/rl_managehotspot"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            android:background="@drawable/control_bg"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:nextFocusDown="@+id/rl_remotesconnect"
+            android:nextFocusLeft="@+id/rl_managewifi"
+            android:nextFocusRight="@+id/rl_remotesconnect"
+            android:nextFocusUp="@+id/rl_managewifi" >
+
+            <ImageView
+                android:id="@+id/iv_managehotspot"
+                android:layout_width="@dimen/navibar_button_height"
+                android:layout_height="@dimen/navibar_button_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_managehotspot" />
+
+            <TextView
+                android:id="@+id/tv_managehotspot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_toRightOf="@id/iv_managehotspot"
+                android:text="@string/setting_managehotspot"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" >
+
+                <ImageView
+                    android:id="@+id/iv_managehotspot_rightarr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_arrow" />
+
+                <TextView
+                    android:id="@+id/tv_nohotspot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_toLeftOf="@id/iv_managehotspot_rightarr"
+                    android:gravity="center_vertical"
+                    android:minWidth="150dip"
+                    android:text="@string/notopen_tip"
+                    android:textColor="@color/green"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_managehotspot_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_toLeftOf="@id/tv_nohotspot"
+                    android:minWidth="150dip"
+                    android:orientation="vertical"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/hs_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/green"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/hs_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/green"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_managehotspot_leftarr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/ll_managehotspot_content"
+                    android:src="@drawable/icon_leftarrow" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_remotesconnect"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            android:background="@drawable/control_bg"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:nextFocusDown="@+id/rl_traffic"
+            android:nextFocusLeft="@+id/rl_managehotspot"
+            android:nextFocusRight="@+id/rl_traffic"
+            android:nextFocusUp="@+id/rl_managehotspot" >
+
+            <ImageView
+                android:id="@+id/iv_remotesconnect"
+                android:layout_width="@dimen/navibar_button_height"
+                android:layout_height="@dimen/navibar_button_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_remotesconnect" />
+
+            <TextView
+                android:id="@+id/tv_remotesconnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv_remotesconnect"
+                android:text="@string/setting_remotesconnect"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" >
+
+                <ImageView
+                    android:id="@+id/iv_remotesconnect_rightarr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_arrow" />
+
+                <LinearLayout
+                    android:id="@+id/ll_remotesconnect_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_toLeftOf="@id/iv_remotesconnect_rightarr"
+                    android:minWidth="150dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_remotesconnectname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/green"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_remotesconnect_leftarr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/ll_remotesconnect_content"
+                    android:src="@drawable/icon_leftarrow" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_traffic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            android:background="@drawable/control_bg"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:nextFocusDown="@+id/rl_versioname"
+            android:nextFocusLeft="@id/rl_remotesconnect"
+            android:nextFocusRight="@+id/rl_versioname"
+            android:nextFocusUp="@id/rl_remotesconnect" >
+
+            <ImageView
+                android:id="@+id/iv_traffic"
+                android:layout_width="@dimen/navibar_button_height"
+                android:layout_height="@dimen/navibar_button_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/setting_traffic" />
+
+            <TextView
+                android:id="@+id/tv_traffic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv_traffic"
+                android:text="@string/traffic_monitoring"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" >
+
+                <ImageView
+                    android:id="@+id/iv_traffic_rightarr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_arrow" />
+
+                <LinearLayout
+                    android:id="@+id/ll_traffic_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_toLeftOf="@id/iv_traffic_rightarr"
+                    android:minWidth="150dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_trafficview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/view_tip"
+                        android:textColor="@color/green"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_traffic_leftarr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/ll_traffic_content"
+                    android:src="@drawable/icon_leftarrow" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_versioname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            android:background="@drawable/control_bg"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:nextFocusDown="@id/rl_managevoice"
+            android:nextFocusLeft="@id/rl_traffic"
+            android:nextFocusRight="@id/rl_managevoice"
+            android:nextFocusUp="@id/rl_traffic" >
+
+            <ImageView
+                android:id="@+id/iv_versioname"
+                android:layout_width="@dimen/navibar_button_height"
+                android:layout_height="@dimen/navibar_button_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_setting_versioname" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv_versioname"
+                android:text="@string/version_ame"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" >
+
+                <ImageView
+                    android:id="@+id/iv_versioname_rightarr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_arrow" />
+
+                <LinearLayout
+                    android:id="@+id/ll_versioname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_toLeftOf="@id/iv_versioname_rightarr"
+                    android:minWidth="150dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_versioname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/green"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_versioname_leftarr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/ll_versioname"
+                    android:src="@drawable/icon_leftarrow" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

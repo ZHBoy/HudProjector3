@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- OBD的数据显示项 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1" >
+
+    <TextView
+        android:id="@+id/tv_datatip"
+        style="@style/style_obd_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/turn_speed"
+        android:textColor="@color/rotationlspeed_textcolor" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_datacontent"
+        style="@style/style_obd_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/rotationlspeed_textcolor" >
+    </TextView>
+
+</RelativeLayout>

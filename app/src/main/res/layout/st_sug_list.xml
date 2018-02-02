@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_item_height"
+    android:background="@drawable/control_bg"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/en_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/common_item_height"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/KeyCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="gone" />
+         
+         <TextView
+            android:id="@+id/num_index"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large" />
+         
+ 		<ImageView
+            android:id="@+id/navaddr_splitline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_navaddr_numsplit"
+            android:layout_marginLeft="10dip"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/num_index"
+            />
+        <TextView
+            android:id="@+id/KeyName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/navaddr_splitline"
+            android:layout_marginLeft="10dip"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_arrow" />
+    </RelativeLayout>
+
+</LinearLayout>

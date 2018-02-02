@@ -1,0 +1,62 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="right_menu_height">80dip</dimen>
+    <dimen name="right_menu_item_width">60dip</dimen>
+    <dimen name="right_menu_item_height">60dip</dimen>
+    <dimen name="userphoto_width">80dip</dimen>
+    <dimen name="userphoto_height">80dip</dimen>
+    <dimen name="margin_left">5dip</dimen>
+    <dimen name="username_fontsize">15sp</dimen>
+    <dimen name="navibar_text_size">14sp</dimen>
+    <dimen name="navibar_margin_right">25dp</dimen>
+    <dimen name="navibar_margin_left">25dp</dimen>
+    <dimen name="navibar_margin_method">30dp</dimen>
+     <dimen name="navibar_start_left">40dp</dimen>
+     <dimen name="start_content_font_size">18sp</dimen>
+      <dimen name="douban_category_font_size">28sp</dimen>
+    <dimen name="navibar_margin_top">15dp</dimen>
+    <dimen name="navibar_edit_height">35dp</dimen>
+     <dimen name="navibar_button_height">40dp</dimen>
+     <dimen name="naviroute_navi_height">45dp</dimen>
+    <dimen name="navisetting_margin_bottom">5dp</dimen>
+    <dimen name="navisetting_subtext_size">20sp</dimen>
+    <dimen name="titletext_size">25sp</dimen>
+    <dimen name="margin_right">5dp</dimen>
+    <dimen name="margin_top">5dp</dimen>
+    <dimen name="margin_bottom">5dp</dimen>
+    <dimen name="setting_margin_top">10dp</dimen>
+    <dimen name="setting_margin_bottom">10dp</dimen>
+    <dimen name="route_text_size">20sp</dimen>
+    <dimen name="main_connectitems_margin">40dp</dimen>
+    <dimen name="main_connectitems_width">35dp</dimen>
+    <dimen name="main_connectitems_height">35dp</dimen>
+    <dimen name="main_connectitems_marginright">100dp</dimen>
+    <dimen name="font_large">30sp</dimen>
+     <dimen name="login_margin_left">12dp</dimen><!-- login card 输入框的margin-->
+    <dimen name="login_margin_right">12dp</dimen>
+    <dimen name="login_label_width">96dp</dimen><!--login输入项宽度-->
+    <dimen name="dou_margin_top">60dp</dimen>
+    <dimen name="dou_margin_left">45dp</dimen>
+    <dimen name="dou_margin_right">45dp</dimen>
+    <dimen name="dou_margin_bottom">10dp</dimen>
+    <dimen name="bottom_line_thickness">1px</dimen>
+    <dimen name="about_me_btn_width">49dp</dimen>
+    <dimen name="channel_item_width">110dip</dimen>
+    <dimen name="channel_grid_item_drawable_padding">5dip</dimen>
+    <dimen name="channel_item_margin_bottom">5.669983dip</dimen>
+    <dimen name="channel_grid_center_item_margin_lr">18.669983dip</dimen>
+    <dimen name="music_margin_right">66dp</dimen>
+    <!-- 新界面布局参数 -->
+    <dimen name="margin_leftright">40dip</dimen>
+    <dimen name="margin_topbottom">10dip</dimen>
+    <!-- 首页边距 -->
+    <dimen name="home_margin">20dp</dimen>
+    <dimen name="home_marginleftright">140dip</dimen>
+    <dimen name="homd_items_textmargin">15dip</dimen>
+    <dimen name="homd_items_fontsize">27sp</dimen>
+    <dimen name = "common_item_height">60dp</dimen>
+    <dimen name="home_margintop">70dip</dimen>
+    <dimen name="speech_content_item_height">60dip</dimen>
+</resources>

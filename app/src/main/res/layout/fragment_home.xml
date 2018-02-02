@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/home_margintop"
+    android:background="@color/black" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/home_margin"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4" >
+			<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/fh_im_home_recorder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/control_bg"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/fh_im_home_obd"
+                    android:nextFocusLeft="@+id/fh_im_home_app"
+                    android:nextFocusRight="@+id/fh_im_home_navi"
+                    android:nextFocusUp="@+id/fh_im_home_app"
+                    android:src="@drawable/icon_item_recorder" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fh_im_home_recorder"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/homd_items_textmargin"
+                    android:text="@string/str_home_recorder"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/homd_items_fontsize" />
+            </RelativeLayout>
+           <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/fh_im_home_navi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/control_bg"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/fg_im_home_fm"
+                    android:nextFocusLeft="@+id/fh_im_home_recorder"
+                    android:nextFocusRight="@+id/fg_im_home_music"
+                    android:nextFocusUp="@+id/fh_im_home_obd"
+                    android:src="@drawable/icon_item_nav" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fh_im_home_navi"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/homd_items_textmargin"
+                    android:text="@string/str_home_navi"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/homd_items_fontsize" />
+            </RelativeLayout>
+            
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/fg_im_home_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/control_bg"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/fh_im_home_setting"
+                    android:nextFocusLeft="@+id/fh_im_home_navi"
+                    android:nextFocusRight="@+id/fg_im_home_phone"
+                    android:nextFocusUp="@+id/fg_im_home_fm"
+                    android:src="@drawable/icon_item_music" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fg_im_home_music"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/homd_items_textmargin"
+                    android:text="@string/str_home_music"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/homd_items_fontsize" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/fg_im_home_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/control_bg"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/fh_im_home_app"
+                    android:nextFocusLeft="@+id/fg_im_home_music"
+                    android:nextFocusRight="@+id/fh_im_home_obd"
+                    android:nextFocusUp="@+id/fg_im_home_setting"
+                    android:src="@drawable/icon_item_phone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fg_im_home_phone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/homd_items_textmargin"
+                    android:text="@string/str_home_phone"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/homd_items_fontsize" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4" >
+		<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/fh_im_home_obd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/control_bg"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/fh_im_home_navi"
+                    android:nextFocusLeft="@+id/fg_im_home_phone"
+                    android:nextFocusRight="@+id/fg_im_home_fm"
+                    android:nextFocusUp="@+id/fh_im_home_recorder"
+                    android:src="@drawable/icon_item_obd" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fh_im_home_obd"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/homd_items_textmargin"
+                    android:text="@string/str_home_obd"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/homd_items_fontsize" />
+            </RelativeLayout>
+            
+			<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/fg_im_home_fm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/control_bg"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/fg_im_home_music"
+                    android:nextFocusLeft="@+id/fh_im_home_obd"
+                    android:nextFocusRight="@+id/fh_im_home_setting"
+                    android:nextFocusUp="@+id/fh_im_home_navi"
+                    android:src="@drawable/icon_item_douban" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fg_im_home_fm"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/homd_items_textmargin"
+                    android:text="@string/str_home_fm"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/homd_items_fontsize" />
+            </RelativeLayout>
+          
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/fg_im_home_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/control_bg"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/fg_im_home_phone"
+                    android:nextFocusLeft="@+id/fh_im_home_fm"
+                    android:nextFocusRight="@+id/fg_im_home_app"
+                    android:nextFocusUp="@+id/fh_im_home_music"
+                    android:src="@drawable/icon_item_setting" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fg_im_home_setting"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/homd_items_textmargin"
+                    android:text="@string/str_home_setting"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/homd_items_fontsize" />
+            </RelativeLayout>
+
+            
+              <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/fh_im_home_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/control_bg"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/fh_im_home_recorder"
+                    android:nextFocusLeft="@+id/fh_im_home_setting"
+                    android:nextFocusRight="@+id/fh_im_home_recorder"
+                    android:nextFocusUp="@+id/fh_im_home_phone"
+                    android:src="@drawable/icon_item_app" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fh_im_home_app"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/homd_items_textmargin"
+                    android:text="@string/str_home_app"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/homd_items_fontsize" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

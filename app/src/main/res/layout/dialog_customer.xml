@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <!-- 退出游戏的背景图 -->
+
+    <ImageView
+        android:id="@+id/exitGameBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/end_navi_dialog" />
+
+    <com.infisight.hudprojector.widget.TimerCountDownView
+        android:id="@+id/dialog_counttime"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignRight="@id/exitGameBackground" />
+
+    <TextView
+        android:id="@+id/dialog_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/exitGameBackground"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="00"
+        android:textColor="#aa00ff00"
+        android:textSize="30sp" />
+
+    <!-- 确认按钮 -->
+
+    <ImageButton
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/exitGameBackground"
+        android:layout_alignLeft="@+id/exitGameBackground"
+        android:background="@drawable/t_certain_down"
+        android:focusable="true"
+        android:nextFocusDown="@+id/btn_cancel"
+        android:nextFocusLeft="@+id/btn_cancel"
+        android:nextFocusRight="@+id/btn_cancel"
+        android:nextFocusUp="@+id/btn_cancel"
+        android:src="@drawable/control_bg" />
+
+    <!-- 取消按钮 -->
+
+    <ImageButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/exitGameBackground"
+        android:layout_alignRight="@+id/exitGameBackground"
+        android:background="@drawable/t_cancel"
+        android:focusable="true"
+        android:nextFocusDown="@+id/btn_ok"
+        android:nextFocusLeft="@+id/btn_ok"
+        android:nextFocusRight="@+id/btn_ok"
+        android:nextFocusUp="@+id/btn_cancel"
+        android:src="@drawable/control_bg" />
+
+    <TextView
+        android:id="@+id/tv_end_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_ok"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+</RelativeLayout>

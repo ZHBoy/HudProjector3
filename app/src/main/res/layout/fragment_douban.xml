@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/douban_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|left" 
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/icon_douban" />
+
+        <LinearLayout
+            android:id="@+id/dou_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/douban_wave_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_douban_dismiss_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_douban_pause_and_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/control_bg"
+            android:focusable="true"
+            android:nextFocusDown="@+id/left_skip_button"
+            android:nextFocusRight="@+id/left_skip_button"
+            android:src="@drawable/douban_pause1" />
+
+        <ImageView
+            android:id="@+id/left_skip_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/control_bg"
+            android:focusable="true"
+            android:nextFocusDown="@+id/btn_channel_item_region"
+            android:nextFocusLeft="@+id/iv_douban_pause_and_play"
+            android:nextFocusRight="@+id/btn_channel_item_region"
+            android:nextFocusUp="@+id/iv_douban_pause_and_play"
+            android:src="@drawable/ic_player_next1" />
+
+        <LinearLayout
+            android:id="@+id/ft_ll_channel_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_channel_list_channel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_channel_list_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/btn_channel_item_region"
+                    style="@style/channel_item_name"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="45dp"
+                    android:background="@drawable/control_bg"
+                    android:drawableTop="@drawable/channel_grid_item_region_default"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/btn_channel_item_ages"
+                    android:nextFocusLeft="@+id/left_skip_button"
+                    android:nextFocusRight="@+id/btn_channel_item_ages"
+                    android:nextFocusUp="@+id/left_skip_button"
+                    android:text="@string/channel_by_region_lang"
+                    android:textSize="@dimen/douban_category_font_size" />
+
+                <TextView
+                    android:id="@+id/btn_channel_item_ages"
+                    style="@style/channel_item_name"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="45dp"
+                    android:background="@drawable/control_bg"
+                    android:drawableTop="@drawable/channel_grid_item_age_default"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/btn_channel_item_genre"
+                    android:nextFocusLeft="@+id/btn_channel_item_region"
+                    android:nextFocusRight="@+id/btn_channel_item_genre"
+                    android:nextFocusUp="@+id/btn_channel_item_region"
+                    android:text="@string/channel_by_ages"
+                    android:textSize="@dimen/douban_category_font_size" />
+
+                <TextView
+                    android:id="@+id/btn_channel_item_genre"
+                    style="@style/channel_item_name"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="45dp"
+                    android:background="@drawable/control_bg"
+                    android:drawableTop="@drawable/channel_grid_item_genre_default"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/btn_channel_item_special"
+                    android:nextFocusLeft="@+id/btn_channel_item_ages"
+                    android:nextFocusRight="@+id/btn_channel_item_special"
+                    android:nextFocusUp="@+id/btn_channel_item_hits"
+                    android:text="@string/channel_by_genre"
+                    android:textSize="@dimen/douban_category_font_size" />
+
+                <TextView
+                    android:id="@+id/btn_channel_item_special"
+                    style="@style/channel_item_name"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="45dp"
+                    android:background="@drawable/control_bg"
+                    android:drawableTop="@drawable/channel_grid_item_special_default"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/btn_channel_item_brand"
+                    android:nextFocusLeft="@+id/btn_channel_item_genre"
+                    android:nextFocusRight="@+id/btn_channel_item_brand"
+                    android:nextFocusUp="@+id/btn_channel_item_genre"
+                    android:text="@string/channel_by_special"
+                    android:textSize="@dimen/douban_category_font_size" />
+
+                <TextView
+                    android:id="@+id/btn_channel_item_brand"
+                    style="@style/channel_item_name"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="45dp"
+                    android:background="@drawable/control_bg"
+                    android:drawableTop="@drawable/channel_grid_item_brand_default"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/btn_channel_item_artist"
+                    android:nextFocusLeft="@+id/btn_channel_item_special"
+                    android:nextFocusRight="@+id/btn_channel_item_artist"
+                    android:nextFocusUp="@+id/btn_channel_item_special"
+                    android:text="@string/channel_by_brand"
+                    android:textSize="@dimen/douban_category_font_size" />
+
+                <TextView
+                    android:id="@+id/btn_channel_item_artist"
+                    style="@style/channel_item_name"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/control_bg"
+                    android:drawableTop="@drawable/channel_grid_item_artist_default"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/iv_douban_pause_and_play"
+                    android:nextFocusLeft="@+id/btn_channel_item_brand"
+                    android:nextFocusRight="@+id/iv_douban_pause_and_play"
+                    android:nextFocusUp="@+id/btn_channel_item_brand"
+                    android:text="@string/channel_by_artist"
+                    android:textSize="@dimen/douban_category_font_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

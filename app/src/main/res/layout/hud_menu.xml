@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/left_side_bg"
+    android:weightSum="4" >
+
+    <ImageView
+        android:id="@+id/hm_im_close_pop"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:background="@drawable/control_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:nextFocusDown="@+id/hm_tv_nearby_bank"
+        android:nextFocusLeft="@+id/hm_tv_search_hotel"
+        android:nextFocusRight="@+id/hm_tv_nearby_bank"
+        android:nextFocusUp="@+id/hm_tv_search_hotel"
+        android:src="@drawable/close"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/hm_tv_nearby_bank"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/control_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:nextFocusDown="@+id/hm_tv_search_parking_lot"
+        android:nextFocusLeft="@+id/hm_im_close_pop"
+        android:nextFocusRight="@+id/hm_tv_search_parking_lot"
+        android:nextFocusUp="@+id/hm_im_close_pop"
+        android:text="@string/fp_tv_bank"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/hm_tv_search_parking_lot"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/control_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:nextFocusDown="@+id/hm_tv_search_gas_station"
+        android:nextFocusLeft="@+id/hm_tv_nearby_bank"
+        android:nextFocusRight="@+id/hm_tv_search_gas_station"
+        android:nextFocusUp="@+id/hm_tv_nearby_bank"
+        android:text="@string/fp_tv_parking_lot"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/hm_tv_search_gas_station"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/control_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:nextFocusDown="@+id/hm_tv_search_hotel"
+        android:nextFocusLeft="@+id/hm_tv_search_parking_lot"
+        android:nextFocusRight="@+id/hm_tv_search_hotel"
+        android:nextFocusUp="@+id/hm_tv_search_parking_lot"
+        android:text="@string/fp_tv_gas_station"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/hm_tv_search_hotel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/control_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:nextFocusDown="@+id/hm_im_close_pop"
+        android:nextFocusLeft="@+id/hm_tv_search_gas_station"
+        android:nextFocusRight="@+id/hm_im_close_pop"
+        android:nextFocusUp="@+id/hm_tv_search_gas_station"
+        android:text="@string/fp_tv_hotel"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+</LinearLayout>

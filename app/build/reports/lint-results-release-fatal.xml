@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 3.0.1">
+
+    <issue
+        id="MockLocation"
+        severity="Fatal"
+        message="Mock locations should only be requested in a test or debug-specific manifest file (typically `src/debug/AndroidManifest.xml`)"
+        category="Correctness"
+        priority="8"
+        summary="Using mock location provider in production"
+        explanation="Using a mock location provider (by requiring the permission `android.permission.ACCESS_MOCK_LOCATION`) should **only** be done in debug builds (or from tests). In Gradle projects, that means you should only request this permission in a test or debug source set specific manifest file.&#xA;&#xA;To fix this, create a new manifest file in the debug folder and move the `&lt;uses-permission>` element there. A typical path to a debug manifest override file in a Gradle project is src/debug/AndroidManifest.xml."
+        errorLine1="    &lt;uses-permission android:name=&quot;android.permission.ACCESS_MOCK_LOCATION&quot; >"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="D:\WorkSpace4\HudProjector3\app\src\main\AndroidManifest.xml"
+            line="20"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="ResourceType"
+        severity="Fatal"
+        message="Expected resource of type drawable"
+        category="Correctness"
+        priority="7"
+        summary="Wrong Resource Type"
+        explanation="Ensures that resource id&apos;s passed to APIs are of the right type; for example, calling `Resources.getColor(R.string.name)` is wrong."
+        errorLine1="  FrameLayout.LayoutParams params4 = (FrameLayout.LayoutParams) ll_whole_path"
+        errorLine2="                                                             ^">
+        <location
+            file="D:\WorkSpace4\HudProjector3\app\src\main\java\com\infisight\hudprojector\fragment\HudFragment.java"
+            line="454"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="ResourceType"
+        severity="Fatal"
+        message="Expected resource of type id"
+        category="Correctness"
+        priority="7"
+        summary="Wrong Resource Type"
+        explanation="Ensures that resource id&apos;s passed to APIs are of the right type; for example, calling `Resources.getColor(R.string.name)` is wrong."
+        errorLine1="  // 显示的位置为:屏幕的宽度的一半-PopupWindow的高度的一半"
+        errorLine2="~">
+        <location
+            file="D:\WorkSpace4\HudProjector3\app\src\main\java\com\infisight\hudprojector\fragment\PhoneFragment.java"
+            line="457"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="WifiManagerLeak"
+        severity="Fatal"
+        message="The WIFI_SERVICE must be looked up on the Application context or memory will leak on devices &lt; Android N. Try changing `getActivity()` to `getActivity().getApplicationContext()`"
+        category="Correctness"
+        priority="6"
+        summary="WifiManager Leak"
+        explanation="On versions prior to Android N (24), initializing the `WifiManager` via `Context#getSystemService` can cause a memory leak if the context is not the application context. Change `context.getSystemService(...)` to `context.getApplicationContext().getSystemService(...)`."
+        errorLine1="   currSpeakV = audioManager.getStreamVolume(AudioManager.STREAM_ALARM);"
+        errorLine2="      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\WorkSpace4\HudProjector3\app\src\main\java\com\infisight\hudprojector\fragment\SettingFragment.java"
+            line="177"
+            column="7"/>
+    </issue>
+
+</issues>

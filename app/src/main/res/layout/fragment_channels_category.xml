@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/channels_grid_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/channels_grid_bg_dim"
+    android:clickable="true" >
+
+    <RelativeLayout
+        android:id="@+id/channels_grid_container"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="40dp" >
+
+        <RelativeLayout
+            android:id="@+id/channels_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/btn_channel_item_region"
+                style="@style/channel_item_name"
+                android:layout_width="@dimen/channel_item_width"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/channel_item_margin_bottom"
+                android:drawablePadding="@dimen/channel_grid_item_drawable_padding"
+                android:drawableTop="@drawable/region_lang_ico"
+                android:singleLine="true"
+                android:text="@string/channel_by_region_lang" />
+
+            <TextView
+                android:id="@+id/btn_channel_item_ages"
+                style="@style/channel_item_name"
+                android:layout_width="@dimen/channel_item_width"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/btn_channel_item_region"
+                android:layout_marginLeft="@dimen/channel_grid_center_item_margin_lr"
+                android:layout_marginRight="@dimen/channel_grid_center_item_margin_lr"
+                android:layout_toRightOf="@+id/btn_channel_item_region"
+                android:drawablePadding="@dimen/channel_grid_item_drawable_padding"
+                android:drawableTop="@drawable/channel_grid_item_ages_ico"
+                android:text="@string/channel_by_ages" />
+
+            <TextView
+                android:id="@+id/btn_channel_item_genre"
+                style="@style/channel_item_name"
+                android:layout_width="@dimen/channel_item_width"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/btn_channel_item_region"
+                android:layout_toRightOf="@id/btn_channel_item_ages"
+                android:drawablePadding="@dimen/channel_grid_item_drawable_padding"
+                android:drawableTop="@drawable/channel_grid_item_genre_ico"
+                android:text="@string/channel_by_genre" />
+
+            <TextView
+                android:id="@+id/btn_channel_item_special"
+                style="@style/channel_item_name"
+                android:layout_width="@dimen/channel_item_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_channel_item_region"
+                android:layout_marginBottom="@dimen/channel_item_margin_bottom"
+                android:drawablePadding="@dimen/channel_grid_item_drawable_padding"
+                android:drawableTop="@drawable/channel_grid_item_special_ico"
+                android:text="@string/channel_by_special" />
+
+            <TextView
+                android:id="@+id/btn_channel_item_brand"
+                style="@style/channel_item_name"
+                android:layout_width="@dimen/channel_item_width"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/btn_channel_item_special"
+                android:layout_marginLeft="@dimen/channel_grid_center_item_margin_lr"
+                android:layout_marginRight="@dimen/channel_grid_center_item_margin_lr"
+                android:layout_toRightOf="@id/btn_channel_item_special"
+                android:drawablePadding="@dimen/channel_grid_item_drawable_padding"
+                android:drawableTop="@drawable/channel_grid_item_brand"
+                android:text="@string/channel_by_brand" />
+
+            <TextView
+                android:id="@+id/btn_channel_item_artist"
+                style="@style/channel_item_name"
+                android:layout_width="@dimen/channel_item_width"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/btn_channel_item_special"
+                android:layout_toRightOf="@+id/btn_channel_item_brand"
+                android:drawablePadding="@dimen/channel_grid_item_drawable_padding"
+                android:drawableTop="@drawable/channel_grid_item_artist"
+                android:text="@string/channel_by_artist" />
+
+            <TextView
+                android:id="@+id/btn_channel_item_trending"
+                style="@style/channel_item_name"
+                android:layout_width="@dimen/channel_item_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_channel_item_special"
+                android:drawablePadding="@dimen/channel_grid_item_drawable_padding"
+                android:drawableTop="@drawable/channel_grid_item_trending_ico"
+                android:text="@string/channel_by_trending" />
+
+            <TextView
+                android:id="@+id/btn_channel_item_hits"
+                style="@style/channel_item_name"
+                android:layout_width="@dimen/channel_item_width"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/btn_channel_item_trending"
+                android:layout_marginLeft="@dimen/channel_grid_center_item_margin_lr"
+                android:layout_marginRight="@dimen/channel_grid_center_item_margin_lr"
+                android:layout_toRightOf="@+id/btn_channel_item_trending"
+                android:drawablePadding="@dimen/channel_grid_item_drawable_padding"
+                android:drawableTop="@drawable/channel_grid_item_hits_ico"
+                android:text="@string/channel_by_hits" />
+
+            <TextView
+                android:id="@+id/btn_channel_item_try"
+                style="@style/channel_item_name"
+                android:layout_width="@dimen/channel_item_width"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/btn_channel_item_trending"
+                android:layout_toRightOf="@+id/btn_channel_item_hits"
+                android:drawablePadding="@dimen/channel_grid_item_drawable_padding"
+                android:drawableTop="@drawable/channel_grid_item_try_ico"
+                android:text="@string/channel_by_try" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

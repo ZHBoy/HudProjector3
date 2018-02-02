@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/control_bg"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/pw_tv_sequence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dip"
+            android:textColor="#FFD39B"
+            android:textSize="30dip" />
+
+        <TextView
+            android:id="@+id/pw_tv_biaodian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/pw_tv_sequence"
+            android:text="@string/point_p"
+            android:textColor="#FFD39B"
+            android:textSize="30dip" />
+
+        <TextView
+            android:id="@+id/pw_tv_connect_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:layout_toRightOf="@+id/pw_tv_sequence"
+            android:textColor="#FF8C69"
+            android:textSize="25dip" />
+
+        <TextView
+            android:id="@+id/pw_tv_connect_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dip"
+            android:layout_toRightOf="@+id/pw_tv_connect_name"
+            android:gravity="right"
+            android:textColor="#FF8C69"
+            android:textSize="25dip" />
+    </RelativeLayout>
+
+</LinearLayout>

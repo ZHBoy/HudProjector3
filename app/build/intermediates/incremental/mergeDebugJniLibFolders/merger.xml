@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\WorkSpace4\HudProjector3\app\libs"><file name="Msc.jar" path="D:\WorkSpace4\HudProjector3\app\libs\Msc.jar"/></source></dataSet><dataSet config="debug"><source path="D:\WorkSpace4\HudProjector3\app\src\debug\jniLibs"/></dataSet></merger>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/music_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@android:color/black"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_no_music"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/no_music"
+            android:textSize="25sp" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_music_play"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="420dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/icon_music" />
+
+            <TextView
+                android:id="@+id/tv_music_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textColor="#ffffff"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/tv_music_singer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="60dp"
+                android:gravity="center_vertical"
+                android:textColor="#ffffff"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <com.infisight.hudprojector.widget.DynamicWaveView
+            android:id="@+id/music_wave_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/ll_music_dismiss_view"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            android:background="@color/black"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/iv_music_play_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/music_margin_right"
+                android:background="@drawable/control_bg"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:nextFocusDown="@+id/iv_music_last"
+                android:nextFocusRight="@+id/iv_music_last"
+                android:src="@drawable/music_play_random_1" />
+
+            <ImageView
+                android:id="@+id/iv_music_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/music_margin_right"
+                android:background="@drawable/control_bg"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:nextFocusDown="@+id/iv_music_play"
+                android:nextFocusLeft="@id/iv_music_play_model"
+                android:nextFocusRight="@+id/iv_music_play"
+                android:nextFocusUp="@id/iv_music_play_model"
+                android:src="@drawable/latest11" />
+
+            <ImageView
+                android:id="@+id/iv_music_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/music_margin_right"
+                android:background="@drawable/control_bg"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:nextFocusDown="@+id/iv_music_next"
+                android:nextFocusLeft="@id/iv_music_last"
+                android:nextFocusRight="@+id/iv_music_next"
+                android:nextFocusUp="@id/iv_music_last"
+                android:src="@drawable/play11" />
+
+            <ImageView
+                android:id="@+id/iv_music_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/control_bg"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:nextFocusLeft="@id/iv_music_play"
+                android:nextFocusUp="@id/iv_music_play"
+                android:src="@drawable/next11" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

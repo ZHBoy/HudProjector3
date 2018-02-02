@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black" 
+    android:layout_gravity="center"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/home_marginleftright"
+        android:layout_marginRight="@dimen/home_marginleftright"
+        android:layout_centerInParent="true"
+         >
+        <RelativeLayout
+            android:id="@+id/traffic_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navibar_button_height"
+            android:gravity="center_vertical"
+             >
+            <ImageView
+                android:id="@+id/traffic_titleBar_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="15dp" />
+
+            <TextView
+                android:id="@+id/traffic_titleBar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/traffic_statics"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" /> 
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/traffic_gprs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navibar_button_height"
+            android:layout_below="@id/traffic_title"
+            android:background="@color/black" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#c7c8cc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="@string/month_traffic_use"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" /> 
+
+            <ImageView
+                android:id="@+id/traffic_gprs_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:id="@+id/traffic_gprs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@id/traffic_gprs_right"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" /> 
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/traffic_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navibar_button_height"
+            android:layout_below="@id/traffic_gprs" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:background="#c7c8cc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="@string/month_wifi_use"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" />
+
+            <ImageView
+                android:id="@+id/traffic_wifi_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:id="@+id/traffic_wifi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@id/traffic_wifi_right"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" /> 
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:src="#c7c8cc" />
+        </RelativeLayout>
+
+        <!--
+         <Spinner 
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/traffic_wifi"/>
+        -->
+
+        <RelativeLayout
+            android:id="@+id/traffic_graph_tip"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navibar_button_height"
+            android:layout_below="@id/traffic_wifi" >
+
+            <TextView
+                android:id="@+id/traffic_graph_tip_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/traffic_static_graph"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" /> 
+
+            <ImageView
+                android:id="@+id/traffic_graph_tip_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/traffic_graph_tip_text"
+                android:src="@drawable/traffic_switch"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/set_maxtraffic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/traffic_setting"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large" 
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="350dip"
+            android:layout_below="@id/traffic_graph_tip"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/traffic_cloum_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

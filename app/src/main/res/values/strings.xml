@@ -1,0 +1,227 @@
+<resources>
+
+    <string name="app_name">HudProject</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_id">558139a8</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tts_toast_format" formatted="false">缓冲进度为%d%%，播放进度为%d%%</string>
+    <string name="navi_empty_car">"驾   车"</string>
+    <string name="navi_empty_foot">"步   行"</string>
+    <string name="navi_start">"起    点"</string>
+    <string name="navi_middle">途经点</string>
+    <string name="navi_end">"终    点"</string>
+    <string name="navi_strategy">"策    略"</string>
+    <string name="navi_route">路径规划</string>
+    <string name="navi_navi">模拟导航</string>
+    <string name="start_navi_navi">实时导航</string>
+    <string name="navi_strategy_speed">速度最快</string>
+    <string name="navi_strategy_cost">避免收费</string>
+    <string name="navi_strategy_distance">距离最短</string>
+    <string name="navi_strategy_nohighway">不走高速</string>
+    <string name="navi_strategy_timenojam">避免拥堵</string>
+    <string name="navi_strategy_costnojam">避免收费且躲避拥堵</string>
+    <string name="navi_speechtip">请说:导航去陆家嘴   第一条</string>
+    <string name="navi_loc_error">定位失败，您的网络不畅通，请到空旷地点后重试</string>
+    <string name="navi_route_tip">请说:避免收费\\不走高速\\避免拥堵</string>
+    <string name="driving_recoder">行车记录仪</string>
+    <string name="obd_nothing">没有OBD信息</string>
+    <string name="person_is_null">请说：打电话给某人</string>
+    <string name="turn_speed">转速</string>
+    <string name="camare_close">录像状态：关</string>
+    <string name="point_p">.</string>
+    <string name="only_password_connect">连接wifi前请先连接手机端设置wifi密码</string>
+    <string name="is_camare_on">录制中</string>
+    <string name="fp_tv_phone_name">--</string>
+    <string name="fp_tv_phone_number">--</string>
+    <string name="fp_tv_phone_location">--</string>
+    <string name="fp_tv_phone_time">--</string>
+    <string name="fp_tv_end_navi">退出导航</string>
+    <string name="fp_tv_bank">银行</string>
+    <string name="fp_tv_parking_lot">停车场</string>
+    <string name="fp_tv_gas_station">加油站</string>
+    <string name="fp_tv_hotel">酒店</string>
+    <string name="unit_colon">:</string>
+    <string name="content_null">-</string>
+    <string name="save_address">收藏地点</string>
+    <string name="nearby_address">附近</string>
+    <string name="see_plan">全览图</string>
+    <string name="tv_read_info">读取</string>
+    <string name="tv_ignore">忽略</string>
+    <string name="tv_home">回家</string>
+    <string name="tv_company">回公司</string>
+    <string name="tv_common_loc">常用地点</string>
+    <string name="tv_defult_road_name">无名道路</string>
+    <string name="delay_search">请稍候</string>
+
+    <!-- 设置相关的内容 -->
+    <string name="setting_managefavorite">管理收藏</string>
+    <string name="setting_managevoice">音量管理</string>
+    <string name="setting_managewifi">连接WIFI</string>
+    <string name="setting_managehotspot">打开热点</string>
+    <string name="setting_remotesconnect">连接遥控器</string>
+    <string name="traffic_monitoring">流量监控</string>
+    <string name="setting_trafficmonitoring">流量监控</string>
+    <string name="theme_blue">经典蓝</string>
+    <string name="theme_pink">可爱粉</string>
+    <string name="theme_white">简约白</string>
+    <!-- 语音部分 -->
+    <string name="pref_key_iat_show">iat_show</string>
+    <string name="pref_title_iat_show">显示听写界面</string>
+    <string name="语种">小燕（普通话）、小梅（粤语）、小强 （湖南话）、小蓉（四川）、小芸（东北）、小坤（河南话）、楠楠（童声）、小新（卡通）</string>
+    <!-- 合成 -->
+    <string-array name="voicer_cloud_entries">
+        <item>小燕</item>
+        <item>小宇</item>
+        <item>凯瑟琳</item>
+        <item>亨利</item>
+        <item>玛丽</item>
+        <item>小研</item>
+        <item>小琪</item>
+        <item>小峰</item>
+        <item>小梅</item>
+        <item>小莉</item>
+        <item>小蓉</item>
+        <item>小芸</item>
+        <item>小坤</item>
+        <item>小强 </item>
+        <item>小莹</item>
+        <item>小新</item>
+        <item>楠楠</item>
+        <item>老孙</item>
+    </string-array>
+    <string-array name="voicer_cloud_values">
+        <item>xiaoyan</item>
+        <item>xiaoyu</item>
+        <item>catherine</item>
+        <item>henry</item>
+        <item>vimary</item>
+        <item>vixy</item>
+        <item>xiaoqi</item>
+        <item>vixf</item>
+        <item>xiaomei</item>
+        <item>xiaolin</item>
+        <item>xiaorong</item>
+        <item>xiaoqian</item>
+        <item>xiaokun</item>
+        <item>xiaoqiang</item>
+        <item>vixying</item>
+        <item>xiaoxin</item>
+        <item>nannan</item>
+        <item>vils</item>
+    </string-array>
+    <string-array name="voicer_local_entries">
+        <item>小燕</item>
+        <item>小峰</item>
+    </string-array>
+    <string-array name="voicer_local_values">
+        <item>xiaoyan</item>
+        <item>xiaofeng</item>
+    </string-array>
+    <string-array name="stream_entries">
+        <item>通话</item>
+        <item>系统</item>
+        <item>铃声</item>
+        <item>音乐</item>
+        <item>闹铃</item>
+        <item>通知</item>
+    </string-array>
+    <string-array name="stream_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <!-- 语言 -->
+    <string-array name="language_entries">
+        <item>普通话</item>
+        <item>粤语</item>
+        <item>河南话</item>
+        <item>四川话</item>
+        <item>英语</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>mandarin</item>
+        <item>cantonese</item>
+        <item>henanese</item>
+        <item>lmz</item>
+        <item>en_us</item>
+    </string-array>
+    <!-- 标点符号 -->
+    <string-array name="punc_entries">
+        <item>有标点</item>
+        <item>无标点</item>
+    </string-array>
+    <string-array name="punc_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <string name="no_music">当前设备无音乐</string>
+    <string name="bt_login_text">登录</string>
+    <string name="text_login_captcha">验证码</string>
+    <string name="song_company">Company</string>
+    <string name="song_year">Year</string>
+    <string name="song_artist">Artist</string>
+    <string name="song_album">Album</string>
+    <string name="song_name">Song</string>
+    <string name="login_username_lv">Username</string>
+    <string name="song_duration">Duration</string>
+    <string name="duration_split">/</string>
+    <string name="channel_switch_btn">channel_switch</string>
+    <string name="channel_by_region_lang">语言</string>
+    <string name="channel_by_ages">年代</string>
+    <string name="channel_by_genre">流派</string>
+    <string name="channel_by_special">推荐</string>
+    <string name="channel_by_brand">品牌</string>
+    <string name="channel_by_artist">歌手</string>
+    <string name="channel_by_trending">上升</string>
+    <string name="channel_by_hits">热门</string>
+    <string name="channel_by_try">试试</string>
+    <string name="singer">singer</string>
+    <string name="time">00:00/00:00</string>
+    <string name="classes">类别</string>
+    <string name="buffer">正在缓冲...</string>
+
+    <!-- 首页修改 -->
+    <string name="str_home_navi">导航</string>
+    <string name="str_home_obd">OBD</string>
+    <string name="str_home_music">音乐</string>
+    <string name="str_home_phone">电话</string>
+    <string name="str_home_recorder">记录仪</string>
+    <string name="str_home_app">应用</string>
+    <string name="str_home_setting">设置</string>
+    <string name="str_home_fm">豆瓣</string>
+    <string name="please_sayas">请说：</string>
+    <!-- 版本更新 -->
+    <string name="dialog_error_title">更新失败</string>
+    <string name="dialog_downfailed_msg">请重新下载客户端</string>
+    <string name="dialog_downfailed_btnnext">确定</string>
+    <string name="dialog_downfailed_cancel">取消</string>
+    <string name="dialog_update_title">版本更新</string>
+    <string name="dialog_update_msg">有最新版本</string>
+    <string name="dialog_update_msg2"></string>
+    <string name="dialog_update_btnupdate">马上更新</string>
+    <string name="dialog_downloading_msg">文件下载</string>
+    <string name="dialog_update_btnnext">以后再说</string>
+
+    <!-- 设置功能 -->
+    <string name="traffic_statics">流量统计</string>
+    <string name="month_traffic_use">本月移动流量消耗</string>
+    <string name="month_wifi_use">本月wifi数据</string>
+    <string name="traffic_static_graph">流量折线图</string>
+    <string name="traffic_setting">流量设置</string>
+    <string name="traffic_unit">M</string>
+    <string name="voicevolume_tip">语音音量:</string>
+    <string name="musicvolume_tip">音乐音量:</string>
+    <string name="notopen_tip">未打开</string>
+    <string name="view_tip">点击查看</string>
+    <string name="version_ame">版本号</string>
+
+    <string name="permission_error">您关闭了某些权限，部分功能无法使用，请到设置-应用-权限中打开</string>
+
+</resources>

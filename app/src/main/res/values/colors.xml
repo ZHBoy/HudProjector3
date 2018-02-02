@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="grey"> #ebebeb</color>
+    <color name="black"> #000000</color>
+    <color name="darkgrey"> #C0C0C0</color>
+    <color name="darkyellow"> #FFCC33</color>
+    <color name="red">#ff0000</color>
+    <color name="green">#00ff00</color>
+    <color name="blue">#0000ff</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#837f7f</color>
+    <color name="grayblackish_green">#2F4F4F</color>
+    <color name="rotationlspeed_textcolor">#48ff00</color>
+    <color name="speed_textcolor">#fff600</color>
+    <color name="rundistance_textcolor">#1afbe5</color>
+    <color name="orient_textcolor">#b500ff</color>
+    <color name="fueltrim_textcolor">#ff7f00</color>
+    <color name="runtime_textcolor">#7b7ad7</color>
+    <color name="main_activity_left_bg">#214476</color>
+    <color name="main_activity_top_bg">#113261</color>
+    <color name="channels_grid_bg_dim">#de000000</color>
+    <color name="circle_color">#080808</color>
+    <color name="ring_color">#9BCD9B</color>
+
+</resources>

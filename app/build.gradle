@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.1"
+
+    defaultConfig {
+        applicationId "com.infisight.hudprojector"
+        minSdkVersion 19
+        targetSdkVersion 27
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+        ndk {
+            abiFilters 'armeabi'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    sourceSets.main.jniLibs.srcDirs = ['libs']
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile('com.afollestad.material-dialogs:core:0.9.4.5') {
+        exclude group: 'com.android.support' //exclude 可以解决 lib冲突的问题。
+    }
+    compile 'com.android.support:appcompat-v7:27.+'
+    //注解框架
+    compile 'com.jakewharton:butterknife:8.5.1'
+    compile 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'joda-time:joda-time:2.3'
+
+    //导航
+    compile 'com.amap.api:navi-3dmap:5.6.0_3dmap5.7.0'
+    //搜索
+    compile 'com.amap.api:search:5.7.0'
+    //定位
+    compile 'com.amap.api:location:3.8.0'
+}
